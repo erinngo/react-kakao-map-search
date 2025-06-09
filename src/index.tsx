@@ -4,6 +4,7 @@ import App from "./App";
 import "./index.css";
 
 //root 설정하고 그 하위에 APP컴포넌트 렌더링
+//깃헙다시업데이트
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
