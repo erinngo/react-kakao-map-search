@@ -18,6 +18,9 @@ const KakaoMapScriptLoader = (props: KakaoMapScriptLoaderProps) => {
     const script = document.createElement("script");
     script.id = KAKAO_MAP_SCRIPT_ID;
     script.src = `https://dapi.kakao.com/v2/maps/sdk.js?appkey=${KAKAO_MAP_APP_KEY}&libraries=services&autoload=false`;
+
+    console.log("스크립트 주소:", script.src);
+
     script.onload = () => {
       //NOTE: 파라미터 'autoload=false' 와 연결되는 부분, 자동로드처리되면 안되고 카카오맵스가 로드된 후에 상태변경해야한다
       window.kakao.maps.load(() => {

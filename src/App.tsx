@@ -9,6 +9,8 @@ const App = () => {
   const [places, setPlaces] = useState<PlaceType[]>([]);
   const [selectedPlaceId, setSelectedPlaceId] = useState("");
   // console.log([places]);
+  console.log("✅ App 렌더링됨");
+
   return (
     <>
       <KakaoMapScriptLoader>
