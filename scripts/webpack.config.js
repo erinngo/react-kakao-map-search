@@ -57,6 +57,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "[name].[contenthash].bundle.js",
+    publicPath: "/",
     clean: true,
   },
   devtool: isProduction ? false : "eval-source-map",
