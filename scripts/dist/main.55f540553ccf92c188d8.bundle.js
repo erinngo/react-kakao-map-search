@@ -19358,6 +19358,7 @@ var KakaoMapScriptLoader = function KakaoMapScriptLoader(props) {
     var script = document.createElement("script");
     script.id = KAKAO_MAP_SCRIPT_ID;
     script.src = "https://dapi.kakao.com/v2/maps/sdk.js?appkey=".concat(KAKAO_MAP_APP_KEY, "&libraries=services&autoload=false");
+    console.log("스크립트 주소:", script.src);
     script.onload = function () {
       //NOTE: 파라미터 'autoload=false' 와 연결되는 부분, 자동로드처리되면 안되고 카카오맵스가 로드된 후에 상태변경해야한다
       window.kakao.maps.load(function () {
@@ -19681,6 +19682,7 @@ var App = function App() {
     selectedPlaceId = _useState4[0],
     setSelectedPlaceId = _useState4[1];
   // console.log([places]);
+  console.log("✅ App 렌더링됨");
   return /*#__PURE__*/(0,jsx_runtime.jsx)(jsx_runtime.Fragment, {
     children: /*#__PURE__*/(0,jsx_runtime.jsx)(Map_KakaoMapScriptLoader, {
       children: /*#__PURE__*/(0,jsx_runtime.jsxs)(Map_DynamicMap, {
@@ -19754,6 +19756,7 @@ var update = injectStylesIntoStyleTag_default()(cjs_js_src/* default */.A, optio
 
 
 //root 설정하고 그 하위에 APP컴포넌트 렌더링
+//깃헙다시업데이트
 
 var root = client.createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/(0,jsx_runtime.jsx)(react.StrictMode, {
